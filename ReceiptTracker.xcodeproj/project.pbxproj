@@ -12,6 +12,13 @@
 		552A9D14275C323C0063B31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552A9D13275C323C0063B31A /* Assets.xcassets */; };
 		552A9D17275C323C0063B31A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552A9D16275C323C0063B31A /* Preview Assets.xcassets */; };
 		552A9D21275C323C0063B31A /* ReceiptTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A9D20275C323C0063B31A /* ReceiptTrackerTests.swift */; };
+		55A10ADF275ED1AA0089548C /* ReceiptListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10ADE275ED1AA0089548C /* ReceiptListView.swift */; };
+		55A10AE1275ED1DC0089548C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE0275ED1DC0089548C /* SettingsView.swift */; };
+		55A10AE4275EF7440089548C /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 55A10AE3275EF7440089548C /* Resolver */; };
+		55A10AE6275EF8A50089548C /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE5275EF8A50089548C /* ScanDocumentView.swift */; };
+		55A10AE8275F1B0D0089548C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE7275F1B0D0089548C /* Helper.swift */; };
+		55D4CE95275C392D007AF84A /* TakePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4CE94275C392D007AF84A /* TakePictureView.swift */; };
+		55D4CE98275C3C7B007AF84A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4CE97275C3C7B007AF84A /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,12 @@
 		552A9D16275C323C0063B31A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552A9D1C275C323C0063B31A /* ReceiptTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		552A9D20275C323C0063B31A /* ReceiptTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTrackerTests.swift; sourceTree = "<group>"; };
+		55A10ADE275ED1AA0089548C /* ReceiptListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListView.swift; sourceTree = "<group>"; };
+		55A10AE0275ED1DC0089548C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		55A10AE5275EF8A50089548C /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
+		55A10AE7275F1B0D0089548C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		55D4CE94275C392D007AF84A /* TakePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureView.swift; sourceTree = "<group>"; };
+		55D4CE97275C3C7B007AF84A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A10AE4275EF7440089548C /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +87,8 @@
 		552A9D0E275C323B0063B31A /* ReceiptTracker */ = {
 			isa = PBXGroup;
 			children = (
+				55A10AE7275F1B0D0089548C /* Helper.swift */,
+				55D4CE96275C3C6F007AF84A /* Extensions */,
 				55D4CE93275C32FF007AF84A /* MainView */,
 				55D4CE92275C32F8007AF84A /* App */,
 				55D4CE91275C32D3007AF84A /* Assets */,
@@ -117,8 +133,20 @@
 			isa = PBXGroup;
 			children = (
 				552A9D11275C323B0063B31A /* MainView.swift */,
+				55D4CE94275C392D007AF84A /* TakePictureView.swift */,
+				55A10ADE275ED1AA0089548C /* ReceiptListView.swift */,
+				55A10AE0275ED1DC0089548C /* SettingsView.swift */,
+				55A10AE5275EF8A50089548C /* ScanDocumentView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		55D4CE96275C3C6F007AF84A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55D4CE97275C3C7B007AF84A /* Color+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +165,9 @@
 			dependencies = (
 			);
 			name = ReceiptTracker;
+			packageProductDependencies = (
+				55A10AE3275EF7440089548C /* Resolver */,
+			);
 			productName = ReceiptTracker;
 			productReference = 552A9D0C275C323B0063B31A /* Receipt Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +218,9 @@
 				Base,
 			);
 			mainGroup = 552A9D03275C323B0063B31A;
+			packageReferences = (
+				55A10AE2275EF7440089548C /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 552A9D0D275C323B0063B31A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,7 +256,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				552A9D12275C323B0063B31A /* MainView.swift in Sources */,
+				55A10AE6275EF8A50089548C /* ScanDocumentView.swift in Sources */,
+				55D4CE98275C3C7B007AF84A /* Color+Ext.swift in Sources */,
+				55A10ADF275ED1AA0089548C /* ReceiptListView.swift in Sources */,
+				55A10AE1275ED1DC0089548C /* SettingsView.swift in Sources */,
 				552A9D10275C323B0063B31A /* ReceiptTrackerApp.swift in Sources */,
+				55D4CE95275C392D007AF84A /* TakePictureView.swift in Sources */,
+				55A10AE8275F1B0D0089548C /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,13 +405,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = SoftWhite;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReceiptTracker/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = ZN2YTMBTAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera to be used to take a picture of the receipt";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -394,13 +436,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = SoftWhite;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReceiptTracker/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = ZN2YTMBTAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera to be used to take a picture of the receipt";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -500,6 +544,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55A10AE2275EF7440089548C /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55A10AE3275EF7440089548C /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55A10AE2275EF7440089548C /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 552A9D04275C323B0063B31A /* Project object */;
 }
