@@ -11,6 +11,7 @@ import VisionKit
 
 struct ScanDocumentView: UIViewControllerRepresentable {
     @Binding var recognizedText: String
+    var callback: () -> Void
     
     func makeCoordinator() -> Coordinator {
         Coordinator(recognizedText: $recognizedText, parent: self)
@@ -36,7 +37,7 @@ struct ScanDocumentView: UIViewControllerRepresentable {
         }
         
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-            
+            parent.callback()
         }
         
         fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
