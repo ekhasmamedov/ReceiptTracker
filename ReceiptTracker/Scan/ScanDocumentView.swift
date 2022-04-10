@@ -1,10 +1,3 @@
-//
-//  ScanDocumentView.swift
-//  ReceiptTracker
-//
-//  Created by Eldar Khasmamedov on 2021-12-06.
-//
-
 import Foundation
 import SwiftUI
 import VisionKit

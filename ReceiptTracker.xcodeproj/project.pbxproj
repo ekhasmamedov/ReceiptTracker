@@ -17,11 +17,13 @@
 		552A9D14275C323C0063B31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552A9D13275C323C0063B31A /* Assets.xcassets */; };
 		552A9D17275C323C0063B31A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552A9D16275C323C0063B31A /* Preview Assets.xcassets */; };
 		552A9D21275C323C0063B31A /* ReceiptTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A9D20275C323C0063B31A /* ReceiptTrackerTests.swift */; };
+		552C6C0C2802359A008D6DFD /* Device+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C6C0B2802359A008D6DFD /* Device+Ext.swift */; };
 		55A10ADF275ED1AA0089548C /* ReceiptListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10ADE275ED1AA0089548C /* ReceiptListView.swift */; };
 		55A10AE1275ED1DC0089548C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE0275ED1DC0089548C /* SettingsView.swift */; };
 		55A10AE4275EF7440089548C /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 55A10AE3275EF7440089548C /* Resolver */; };
 		55A10AE6275EF8A50089548C /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE5275EF8A50089548C /* ScanDocumentView.swift */; };
-		55A10AE8275F1B0D0089548C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE7275F1B0D0089548C /* Helper.swift */; };
+		55CC4B8528024B0F00CC831B /* ReceiptDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4B8428024B0F00CC831B /* ReceiptDetailsView.swift */; };
+		55CC4B8728024B1F00CC831B /* ReceiptDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4B8628024B1F00CC831B /* ReceiptDetailsViewModel.swift */; };
 		55D4CE95275C392D007AF84A /* TakePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4CE94275C392D007AF84A /* TakePictureView.swift */; };
 		55D4CE98275C3C7B007AF84A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4CE97275C3C7B007AF84A /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
@@ -49,10 +51,12 @@
 		552A9D16275C323C0063B31A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552A9D1C275C323C0063B31A /* ReceiptTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		552A9D20275C323C0063B31A /* ReceiptTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTrackerTests.swift; sourceTree = "<group>"; };
+		552C6C0B2802359A008D6DFD /* Device+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Ext.swift"; sourceTree = "<group>"; };
 		55A10ADE275ED1AA0089548C /* ReceiptListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListView.swift; sourceTree = "<group>"; };
 		55A10AE0275ED1DC0089548C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		55A10AE5275EF8A50089548C /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
-		55A10AE7275F1B0D0089548C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		55CC4B8428024B0F00CC831B /* ReceiptDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailsView.swift; sourceTree = "<group>"; };
+		55CC4B8628024B1F00CC831B /* ReceiptDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailsViewModel.swift; sourceTree = "<group>"; };
 		55D4CE94275C392D007AF84A /* TakePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureView.swift; sourceTree = "<group>"; };
 		55D4CE97275C3C7B007AF84A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,9 +91,8 @@
 		552611FA2762D671008164B3 /* Receipts */ = {
 			isa = PBXGroup;
 			children = (
-				55A10ADE275ED1AA0089548C /* ReceiptListView.swift */,
-				552611FF2762D727008164B3 /* ReceiptListViewModel.swift */,
-				552611FD2762D6CC008164B3 /* ReceiptRowView.swift */,
+				55CC4B892802702000CC831B /* List */,
+				55CC4B882802701A00CC831B /* Details */,
 			);
 			path = Receipts;
 			sourceTree = "<group>";
@@ -143,10 +146,13 @@
 				55D4CE92275C32F8007AF84A /* App */,
 				55D4CE91275C32D3007AF84A /* Assets */,
 				55D4CE96275C3C6F007AF84A /* Extensions */,
-				55A10AE7275F1B0D0089548C /* Helper.swift */,
 				55D4CE93275C32FF007AF84A /* MainView */,
 				552612012762D7D2008164B3 /* Models */,
+				552611FA2762D671008164B3 /* Receipts */,
+				552611FB2762D692008164B3 /* Scan */,
+				552611FC2762D698008164B3 /* Settings */,
 				552611F52762D534008164B3 /* Styles */,
+				552C6C0A28023567008D6DFD /* Utils */,
 			);
 			path = ReceiptTracker;
 			sourceTree = "<group>";
@@ -165,6 +171,32 @@
 				552A9D20275C323C0063B31A /* ReceiptTrackerTests.swift */,
 			);
 			path = ReceiptTrackerTests;
+			sourceTree = "<group>";
+		};
+		552C6C0A28023567008D6DFD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		55CC4B882802701A00CC831B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				55CC4B8428024B0F00CC831B /* ReceiptDetailsView.swift */,
+				55CC4B8628024B1F00CC831B /* ReceiptDetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		55CC4B892802702000CC831B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				55A10ADE275ED1AA0089548C /* ReceiptListView.swift */,
+				552611FF2762D727008164B3 /* ReceiptListViewModel.swift */,
+				552611FD2762D6CC008164B3 /* ReceiptRowView.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		55D4CE91275C32D3007AF84A /* Assets */ = {
@@ -188,9 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				552A9D11275C323B0063B31A /* MainView.swift */,
-				552611FA2762D671008164B3 /* Receipts */,
-				552611FB2762D692008164B3 /* Scan */,
-				552611FC2762D698008164B3 /* Settings */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -199,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				55D4CE97275C3C7B007AF84A /* Color+Ext.swift */,
+				552C6C0B2802359A008D6DFD /* Device+Ext.swift */,
 				552611F82762D657008164B3 /* NavigationLink+Empty.swift */,
 			);
 			path = Extensions;
@@ -312,6 +342,7 @@
 			files = (
 				552611F72762D54B008164B3 /* PrimaryButtonStyle.swift in Sources */,
 				552611FE2762D6CC008164B3 /* ReceiptRowView.swift in Sources */,
+				55CC4B8528024B0F00CC831B /* ReceiptDetailsView.swift in Sources */,
 				552611F92762D657008164B3 /* NavigationLink+Empty.swift in Sources */,
 				552612032762D7E1008164B3 /* Receipt.swift in Sources */,
 				552A9D12275C323B0063B31A /* MainView.swift in Sources */,
@@ -321,8 +352,9 @@
 				55A10AE1275ED1DC0089548C /* SettingsView.swift in Sources */,
 				552A9D10275C323B0063B31A /* ReceiptTrackerApp.swift in Sources */,
 				552612002762D727008164B3 /* ReceiptListViewModel.swift in Sources */,
+				55CC4B8728024B1F00CC831B /* ReceiptDetailsViewModel.swift in Sources */,
 				55D4CE95275C392D007AF84A /* TakePictureView.swift in Sources */,
-				55A10AE8275F1B0D0089548C /* Helper.swift in Sources */,
+				552C6C0C2802359A008D6DFD /* Device+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

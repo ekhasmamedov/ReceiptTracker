@@ -1,10 +1,3 @@
-//
-//  PrimaryButtonStyle.swift
-//  ReceiptTracker
-//
-//  Created by Eldar Khasmamedov on 2021-12-09.
-//
-
 import SwiftUI
 
 struct PrimaryButtonStyle: ButtonStyle {

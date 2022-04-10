@@ -1,18 +1,6 @@
-//
-//  MainView.swift
-//  ReceiptTracker
-//
-//  Created by Eldar Khasmamedov on 2021-12-04.
-//
-
 import SwiftUI
 
-struct MainView: View {
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor(Color.greyColor)
-        UITabBar.appearance().isTranslucent = true
-    }
-    
+struct MainView: View {    
     var body: some View {
         TabView {
             ReceiptListView()
@@ -31,6 +19,7 @@ struct MainView: View {
                     Text("Settings")
                 }
         }
+        .accentColor(Color.softWhiteColor)
     }
 }
 

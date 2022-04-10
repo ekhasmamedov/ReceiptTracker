@@ -1,10 +1,3 @@
-//
-//  ReceiptTrackerTests.swift
-//  ReceiptTrackerTests
-//
-//  Created by Eldar Khasmamedov on 2021-12-04.
-//
-
 import XCTest
 @testable import ReceiptTracker
 

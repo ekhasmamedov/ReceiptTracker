@@ -1,10 +1,3 @@
-//
-//  Color+Ext.swift
-//  ReceiptTracker
-//
-//  Created by Eldar Khasmamedov on 2021-12-04.
-//
-
 import Foundation
 import SwiftUI
 
@@ -18,4 +11,10 @@ extension Color {
     static let darkGreenColor = Color("DarkGreen")
     static let greyColor = Color("Grey")
     static let darkGreyColor = Color("DarkGrey")
+}
+
+extension Color {
+    var uiColor: UIColor {
+        UIColor(self)
+    }
 }

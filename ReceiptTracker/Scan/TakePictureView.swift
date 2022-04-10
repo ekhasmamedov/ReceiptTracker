@@ -1,10 +1,3 @@
-//
-//  TakePictureView.swift
-//  ReceiptTracker
-//
-//  Created by Eldar Khasmamedov on 2021-12-04.
-//
-
 import Foundation
 import SwiftUI
 
@@ -16,7 +9,9 @@ struct TakePictureView: View {
         ZStack {
             Color.darkGreenColor.ignoresSafeArea()
             Button("Take Picture") {
-                showingScanningView = true
+                if !UIDevice.current.isSimulator {
+                    showingScanningView = true
+                }
             }
             .buttonStyle(PrimaryButtonStyle())
         }
