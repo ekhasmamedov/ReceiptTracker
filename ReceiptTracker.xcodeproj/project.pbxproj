@@ -24,6 +24,8 @@
 		55A10AE6275EF8A50089548C /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A10AE5275EF8A50089548C /* ScanDocumentView.swift */; };
 		55CC4B8528024B0F00CC831B /* ReceiptDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4B8428024B0F00CC831B /* ReceiptDetailsView.swift */; };
 		55CC4B8728024B1F00CC831B /* ReceiptDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4B8628024B1F00CC831B /* ReceiptDetailsViewModel.swift */; };
+		55CC4B8B280B8E9100CC831B /* TakePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4B8A280B8E9100CC831B /* TakePictureViewModel.swift */; };
+		55CC4B8D280B905400CC831B /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC4B8C280B905400CC831B /* TextModel.swift */; };
 		55D4CE95275C392D007AF84A /* TakePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4CE94275C392D007AF84A /* TakePictureView.swift */; };
 		55D4CE98275C3C7B007AF84A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4CE97275C3C7B007AF84A /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		55A10AE5275EF8A50089548C /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
 		55CC4B8428024B0F00CC831B /* ReceiptDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailsView.swift; sourceTree = "<group>"; };
 		55CC4B8628024B1F00CC831B /* ReceiptDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailsViewModel.swift; sourceTree = "<group>"; };
+		55CC4B8A280B8E9100CC831B /* TakePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewModel.swift; sourceTree = "<group>"; };
+		55CC4B8C280B905400CC831B /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModel.swift; sourceTree = "<group>"; };
 		55D4CE94275C392D007AF84A /* TakePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureView.swift; sourceTree = "<group>"; };
 		55D4CE97275C3C7B007AF84A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 			children = (
 				55A10AE5275EF8A50089548C /* ScanDocumentView.swift */,
 				55D4CE94275C392D007AF84A /* TakePictureView.swift */,
+				55CC4B8A280B8E9100CC831B /* TakePictureViewModel.swift */,
+				55CC4B8C280B905400CC831B /* TextModel.swift */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -343,9 +349,11 @@
 				552611F72762D54B008164B3 /* PrimaryButtonStyle.swift in Sources */,
 				552611FE2762D6CC008164B3 /* ReceiptRowView.swift in Sources */,
 				55CC4B8528024B0F00CC831B /* ReceiptDetailsView.swift in Sources */,
+				55CC4B8D280B905400CC831B /* TextModel.swift in Sources */,
 				552611F92762D657008164B3 /* NavigationLink+Empty.swift in Sources */,
 				552612032762D7E1008164B3 /* Receipt.swift in Sources */,
 				552A9D12275C323B0063B31A /* MainView.swift in Sources */,
+				55CC4B8B280B8E9100CC831B /* TakePictureViewModel.swift in Sources */,
 				55A10AE6275EF8A50089548C /* ScanDocumentView.swift in Sources */,
 				55D4CE98275C3C7B007AF84A /* Color+Ext.swift in Sources */,
 				55A10ADF275ED1AA0089548C /* ReceiptListView.swift in Sources */,

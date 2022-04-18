@@ -3,11 +3,13 @@ import SwiftUI
 import VisionKit
 
 struct ScanDocumentView: UIViewControllerRepresentable {
-    @Binding var recognizedText: String
-    var callback: () -> Void
-    
+    var didFinishScanning: ((Result<[UIImage], Error>) -> Void)
+    var didCancelScanning: () -> Void
+
+    // MARK: - UIViewControllerRepresentable methods
+
     func makeCoordinator() -> Coordinator {
-        Coordinator(recognizedText: $recognizedText, parent: self)
+        Coordinator(scannerView: self)
     }
     
     func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
@@ -16,32 +18,34 @@ struct ScanDocumentView: UIViewControllerRepresentable {
         return documentViewController
     }
     
-    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
-        
-    }
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController,
+                                context: Context) {}
     
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
-        var recognizedText: Binding<String>
-        var parent: ScanDocumentView
+        let scannerView: ScanDocumentView
         
-        init(recognizedText: Binding<String>, parent: ScanDocumentView) {
-            self.recognizedText = recognizedText
-            self.parent = parent
+        init(scannerView: ScanDocumentView) {
+            self.scannerView = scannerView
         }
-        
-        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-            parent.callback()
-        }
-        
-        fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
-            var extractedImages = [CGImage]()
-            for index in 0..<scan.pageCount {
-                let extractedImage = scan.imageOfPage(at: index)
-                guard let cgImage = extractedImage.cgImage else { continue }
-                
-                extractedImages.append(cgImage)
+
+        // MARK: - VNDocumentCameraViewControllerDelegate methods
+
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController,
+                                          didFinishWith scan: VNDocumentCameraScan) {
+            var scannedImages: [UIImage] = []
+            for i in 0..<scan.pageCount {
+                scannedImages.append(scan.imageOfPage(at: i))
             }
-            return extractedImages
+            scannerView.didFinishScanning(.success(scannedImages))
+        }
+
+        func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+            scannerView.didCancelScanning()
+        }
+
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController,
+                                          didFailWithError error: Error) {
+            scannerView.didFinishScanning(.failure(error))
         }
     }
 }
