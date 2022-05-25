@@ -6,26 +6,40 @@ struct TakePictureView: View {
     @StateObject private var textRecognition = TakePictureViewModel()
     
     var body: some View {
-        mainView
+        NavigationView {
+            mainView
+                .navigationBarTitle("", displayMode: .inline)
+                .toolbar { toolbarContent }
+        }
         .sheet(isPresented: $showScanningView) {
             scanDocumentView
+        }
+    }
+
+    @ToolbarContentBuilder
+    var toolbarContent: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button("Scan") {
+                if !UIDevice.current.isSimulator { // no camera on the Simulator
+                    showScanningView = true
+                }
+            }
+        }
+
+        ToolbarItem(placement: .navigationBarTrailing) {
+            Button("Save") {
+                print("Save tapped!")
+            }
         }
     }
 
     var mainView: some View {
         ScrollView {
             VStack {
-                Button("Take Picture") {
-                    if !UIDevice.current.isSimulator { // no camera on the Simulator
-                        showScanningView = true
-                    }
-                }.buttonStyle(PrimaryButtonStyle())
-
-                ForEach(textRecognition.items, id: \.id) { item in
+                ForEach(textRecognition.items) { item in
                     Text(item.text)
                         .foregroundColor(Color.softWhiteColor)
                 }
-
                 Spacer()
             }
             .frame(maxWidth: .infinity)

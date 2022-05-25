@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55193C0B283DDB6900D10856 /* UINavigationBarAppearance+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55193C0A283DDB6900D10856 /* UINavigationBarAppearance+Ext.swift */; };
+		55193C0D283DDC8A00D10856 /* UITabBarAppearance+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55193C0C283DDC8A00D10856 /* UITabBarAppearance+Ext.swift */; };
+		55193C0F283DDDF200D10856 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55193C0E283DDDF200D10856 /* UINavigationBar+Appearance.swift */; };
 		552611F72762D54B008164B3 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552611F62762D54B008164B3 /* PrimaryButtonStyle.swift */; };
 		552611F92762D657008164B3 /* NavigationLink+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552611F82762D657008164B3 /* NavigationLink+Empty.swift */; };
 		552611FE2762D6CC008164B3 /* ReceiptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552611FD2762D6CC008164B3 /* ReceiptRowView.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55193C0A283DDB6900D10856 /* UINavigationBarAppearance+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBarAppearance+Ext.swift"; sourceTree = "<group>"; };
+		55193C0C283DDC8A00D10856 /* UITabBarAppearance+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarAppearance+Ext.swift"; sourceTree = "<group>"; };
+		55193C0E283DDDF200D10856 /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
 		552611F62762D54B008164B3 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		552611F82762D657008164B3 /* NavigationLink+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationLink+Empty.swift"; sourceTree = "<group>"; };
 		552611FD2762D6CC008164B3 /* ReceiptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRowView.swift; sourceTree = "<group>"; };
@@ -236,6 +242,9 @@
 				55D4CE97275C3C7B007AF84A /* Color+Ext.swift */,
 				552C6C0B2802359A008D6DFD /* Device+Ext.swift */,
 				552611F82762D657008164B3 /* NavigationLink+Empty.swift */,
+				55193C0E283DDDF200D10856 /* UINavigationBar+Appearance.swift */,
+				55193C0A283DDB6900D10856 /* UINavigationBarAppearance+Ext.swift */,
+				55193C0C283DDC8A00D10856 /* UITabBarAppearance+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +358,7 @@
 				552611F72762D54B008164B3 /* PrimaryButtonStyle.swift in Sources */,
 				552611FE2762D6CC008164B3 /* ReceiptRowView.swift in Sources */,
 				55CC4B8528024B0F00CC831B /* ReceiptDetailsView.swift in Sources */,
+				55193C0B283DDB6900D10856 /* UINavigationBarAppearance+Ext.swift in Sources */,
 				55CC4B8D280B905400CC831B /* TextModel.swift in Sources */,
 				552611F92762D657008164B3 /* NavigationLink+Empty.swift in Sources */,
 				552612032762D7E1008164B3 /* Receipt.swift in Sources */,
@@ -361,7 +371,9 @@
 				552A9D10275C323B0063B31A /* ReceiptTrackerApp.swift in Sources */,
 				552612002762D727008164B3 /* ReceiptListViewModel.swift in Sources */,
 				55CC4B8728024B1F00CC831B /* ReceiptDetailsViewModel.swift in Sources */,
+				55193C0D283DDC8A00D10856 /* UITabBarAppearance+Ext.swift in Sources */,
 				55D4CE95275C392D007AF84A /* TakePictureView.swift in Sources */,
+				55193C0F283DDDF200D10856 /* UINavigationBar+Appearance.swift in Sources */,
 				552C6C0C2802359A008D6DFD /* Device+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
