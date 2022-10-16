@@ -10,9 +10,16 @@ class ReceiptListViewModel: ObservableObject {
     
     func fetchReceipts() {
         receipts = [
-            Receipt(identifier: "1", name: "Receipt 1"),
-            Receipt(identifier: "2", name: "Receipt 2"),
-            Receipt(identifier: "3", name: "Receipt 3"),
+            Receipt(transactionNumber: "123123",
+                    cardName: "MasterCard",
+                    cardNumber: "**********4342",
+                    merchantName: "Winners",
+                    date: "15/02/12",
+                    time: "13:06:16",
+                    price: 79.99,
+                    totalPrice: 90.39,
+                    tax: 0.13,
+                    authNumber: "133145")
         ]
     }
 }

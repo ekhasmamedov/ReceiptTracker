@@ -8,6 +8,6 @@ class ReceiptDetailsViewModel: ObservableObject {
 
     init(receipt: Receipt) {
         self.receipt = receipt
-        title = receipt.name
+        title = receipt.merchantName
     }
 }

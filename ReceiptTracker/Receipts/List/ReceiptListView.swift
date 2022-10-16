@@ -21,7 +21,7 @@ struct ReceiptListView: View {
         List {
             ForEach(viewModel.receipts) { receipt in
                 NavigationLink(destination: ReceiptDetailsView(viewModel: ReceiptDetailsViewModel(receipt: receipt))) {
-                    ReceiptRowView(text: receipt.name)
+                    ReceiptRowView(text: receipt.merchantName)
                 }
             }
         }

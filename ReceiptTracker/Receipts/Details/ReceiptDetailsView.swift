@@ -21,7 +21,6 @@ struct ReceiptDetailsView: View {
 
 struct ReceiptDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        let receipt = Receipt(identifier: "1", name: "Receipt Name")
-        ReceiptDetailsView(viewModel: ReceiptDetailsViewModel(receipt: receipt))
+        ReceiptDetailsView(viewModel: ReceiptDetailsViewModel(receipt: DataMocks.receipt))
     }
 }
